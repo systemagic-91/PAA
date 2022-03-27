@@ -2,7 +2,7 @@
 
 int main(){
 
-    int n = 3;
+    int n = 4;
     int count = 0;
 
     for (int i = 1; i < n; i++){
