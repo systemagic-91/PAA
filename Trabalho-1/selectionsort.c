@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <math.h>
 #include <time.h>
 
 void swap(int menor, int j);
@@ -9,11 +7,29 @@ void mostrar(int n);
 void selectionSort(int n);
 
 int array[] = {9,7,20,40,99,50,30,1,0,-1,15,24};
+// int array[100000];
+// int array[250000];
+// int array[500000];
 
 int main(){    
-    int tam = sizeof(array) / sizeof(int);    
+
+    // for (int i = 0; i < 100000; i++){
+    //     array[i] = rand() % 100000;
+    // }
+    
+    int tam = sizeof(array) / sizeof(int);   
+
+    clock_t t = clock();
+
     selectionSort(tam);
-    mostrar(tam);
+
+    t = clock() - t;
+
+    printf("\nTempo de execução: %lfseg\n\n", ((double)t)/((CLOCKS_PER_SEC/1000)));
+    
+    // mostrar(tam);
+    
+    printf("\n");
 }
 
 void mostrar(int n){
