@@ -6,7 +6,10 @@ void swap(int menor, int j);
 void mostrar(int n);
 void selectionSort(int n);
 
-int array[] = {9,7,20,40,99,50,30,1,0,-1,15,24};
+//int array[] = {9,7,20,40,99,50,30,1,0,-1,15,24,33,58,15,16};
+int array[] = {9,7,20,40,99,50,30,1,0,-1};
+int comparacoes = 0;
+
 // int array[100000];
 // int array[250000];
 // int array[500000];
@@ -24,12 +27,11 @@ int main(){
     selectionSort(tam);
 
     t = clock() - t;
+    
+    printf("Numero de comparações: %d\n", comparacoes);
 
-    printf("\nTempo de execução: %lfseg\n\n", ((double)t)/((CLOCKS_PER_SEC/1000)));
-    
+    printf("\nTempo de execução: %lfseg\n", ((double)t)/((CLOCKS_PER_SEC/1000)));
     // mostrar(tam);
-    
-    printf("\n");
 }
 
 void mostrar(int n){
@@ -56,6 +58,7 @@ void selectionSort(int n){
     for (int i = 0; i < (n-1); i++){
         int menor = i;
         for (int j = (i+1); j < n; j++) {
+            comparacoes++;
             if(array[j] < array[menor]){
                 menor = j;
             }            
