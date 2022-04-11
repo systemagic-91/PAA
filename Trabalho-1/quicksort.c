@@ -8,19 +8,19 @@ void quickSort(int i, int j);
 void mostrar(int n);
 
 //int array[] = {9,7,20,40,99,50,30,1,0,-1,15,24,33,58,15,16};
-//int array[] = {9,7,20,40,99,50,30,1,0,-1};
+int array[] = {9,7,20,40,99,50,30,1,0,-1};
 int comparacoes = 0;
 
 // int array[100000];
 // int array[250000];
-int array[500000];
+// int array[500000];
 
 
 int main(){    
 
-   for (int i = 0; i < 500000; i++){
-      array[i] = rand() % 100000;
-   }
+   // for (int i = 0; i < 100000; i++){
+   //    array[i] = rand() % 100000;
+   // }
 
    int tam = sizeof(array) / sizeof(int);
 
@@ -32,7 +32,7 @@ int main(){
 
    //printf("Numero de comparações: %d\n", comparacoes);
 
-   printf("\nTempo de execução: %lfseg\n\n", ((double)t)/((CLOCKS_PER_SEC/1000)));
+   printf("\nTempo de execução: %lfseg\n", ((double)t)/((CLOCKS_PER_SEC)));
    //  mostrar(tam);
 }
 
