@@ -28,9 +28,9 @@ int main(){
 
     t = clock() - t;
     
-    printf("Numero de comparações: %d\n", comparacoes);
+    // printf("Numero de comparações: %d\n", comparacoes);
 
-    printf("\nTempo de execução: %lfseg\n", ((double)t)/((CLOCKS_PER_SEC/1000)));
+    printf("\nTempo de execução: %lfseg\n", ((double)t)/((CLOCKS_PER_SEC)));
     // mostrar(tam);
 }
 
